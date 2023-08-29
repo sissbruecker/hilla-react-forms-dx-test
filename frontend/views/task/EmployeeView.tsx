@@ -21,6 +21,8 @@ import React, {useEffect, useMemo, useState} from "react";
  * 4. Make the employee selection functional, so that the form is populated with
  *    the data of the selected employee.
  * 5. Make the reset button functional, so that it resets the form data
+ * 6. Disable the submit button when the form is invalid
+ * 7. Disable the reset button if the form has not been modified
  */
 
 interface EmployeeFormProps {

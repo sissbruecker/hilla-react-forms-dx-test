@@ -24,6 +24,8 @@ import {Notification} from "@hilla/react-components/Notification";
  * 4. Make the employee selection functional, so that the form is populated with
  *    the data of the selected employee.
  * 5. Make the reset button functional, so that it resets the form data
+ * 6. Disable the submit button when the form is invalid
+ * 7. Disable the reset button if the form has not been modified
  */
 
 interface EmployeeFormProps {
@@ -73,8 +75,8 @@ const EmployeeForm: React.FC<EmployeeFormProps> = (props) => {
             <EmailField label="Email" {...binder.field(binder.model.email)}/>
         </FormLayout>
         <HorizontalLayout id="button-layout" theme="spacing">
-            <Button theme="tertiary" onClick={binder.reset}>Reset</Button>
-            <Button theme="primary" onClick={binder.submit}>Save</Button>
+            <Button theme="tertiary" onClick={binder.reset} disabled={!binder.dirty}>Reset</Button>
+            <Button theme="primary" onClick={binder.submit} disabled={binder.invalid}>Save</Button>
         </HorizontalLayout>
     </div>
 }
