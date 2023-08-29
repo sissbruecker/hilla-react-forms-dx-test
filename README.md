@@ -2,8 +2,8 @@
 
 Contains task and solution for the Hilla React forms DX test.
 
-You have been given a simple React application that contains a view for adding and editing employees.
-Your task it to make the employee form in that view functional:
+You have been given a simple Hilla React application that contains a view for adding and editing employees.
+Your task is to make the employee form in that view functional:
 1. Make the submit button functional, so that it saves the form data to the backend, via the `EmployeeEndpoint.saveEmployee` endpoint method.
 2. Add a client-side validation constraint that checks that the email ends with `@vaadin.com`.
 3. Add a client-side validation constraint that checks that the first name and last name are different.
